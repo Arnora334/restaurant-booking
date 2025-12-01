@@ -10,7 +10,6 @@
     <h1 class="text-3xl font-bold mb-6">Sistem Pemesanan Restoran</h1>
 
     <a href="add_booking.php" class="bg-green-600 text-white px-4 py-2 rounded mb-4 inline-block hover:bg-green-700">+ Tambah Pemesanan</a>
-    <a href="reports.php" class="bg-blue-600 text-white px-4 py-2 rounded mb-4 ml-2 inline-block hover:bg-blue-700">Laporan</a>
 
     <div class="mt-6 bg-white shadow rounded p-4">
       <h2 class="text-xl font-semibold mb-4">Daftar Pemesanan</h2>
