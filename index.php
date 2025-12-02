@@ -28,7 +28,7 @@
           require 'includes/database.php';
           require 'includes/classes/Pemesanan.php';
           $daftar = Pemesanan::getAllWithDetails($pdo);
-          foreach ($daftar as $p) {
+          foreach ($daftar as $p) {// Pemanggilan perulangan: $p['pelanggan'], $p['nomor_meja'], $p['tanggal'], $p['waktu'], $p['jumlah_orang']
             echo "<tr>
               <td class='px-4 py-2'>{$p['pelanggan']}</td>
               <td class='px-4 py-2'>Meja {$p['nomor_meja']}</td>

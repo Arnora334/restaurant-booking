@@ -26,7 +26,7 @@ CREATE TABLE pemesanan (
   FOREIGN KEY (id_meja) REFERENCES meja(id_meja) ON DELETE CASCADE
 );
 
-INSERT INTO meja (nomor_meja, kapasitas, status) VALUES
+ INSERT INTO meja (nomor_meja, kapasitas, status) VALUES
 (1, 10, 'tersedia'),
 (2, 10, 'tersedia'),
 (3, 10, 'tersedia'),

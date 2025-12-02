@@ -1,5 +1,6 @@
 <?php
 class Pemesanan {
+    //Properti privat untuk menyimpan data pemesanan
     private $id;
     private $id_pelanggan;
     private $id_meja;
@@ -7,6 +8,7 @@ class Pemesanan {
     private $waktu;
     private $jumlah_orang;
 
+    //Konstruktor untuk membuat objek Pemesanan
     public function __construct($id_pelanggan, $id_meja, $tanggal, $waktu, $jumlah, $id = null) {
         $this->id = $id;
         $this->id_pelanggan = $id_pelanggan;
@@ -16,6 +18,7 @@ class Pemesanan {
         $this->jumlah_orang = $jumlah;
     }
 
+    // Getter untuk mengakses properti privat dari luar class
     public function getId() { return $this->id; }
 
     public function simpan($pdo) {
@@ -46,7 +49,7 @@ class Pemesanan {
         return $stmt->fetchAll();
     }
 
-    public static function findById($pdo, $id) {
+    public static function findById($pdo, $id) {//Mencari satu pemesanan berdasarkan ID-nya
         $stmt = $pdo->prepare("SELECT * FROM pemesanan WHERE id_pemesanan = ?");
         $stmt->execute([$id]);
         return $stmt->fetch();
